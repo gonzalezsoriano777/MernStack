@@ -20,3 +20,12 @@ Twitter Bootstrap 4 .. New to me // Used for the UI
 Heroku and Git for Deployment .. New to me // Used for Deployment
 
 */
+
+
+// DevConnector
+// What will do with the DevConnector
+/*
+
+Small social network with authentication, profiles, dashboard, posts
+
+*/
