@@ -1,0 +1,33 @@
+{
+  "name": "mernstack1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gonzalezsoriano777/MernStack.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gonzalezsoriano777/MernStack/issues"
+  },
+  "homepage": "https://github.com/gonzalezsoriano777/MernStack#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "express": "^4.9.8",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^5.3.9",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "validator": "^10.8.0"
+  },
+  "devDependencies": { // Using the -D makes the package a DevDependecies 
+    "nodemon": "^1.18.6"
+  }
+}

@@ -22,10 +22,12 @@ Heroku and Git for Deployment .. New to me // Used for Deployment
 */
 
 
-// DevConnector
-// What will do with the DevConnector
+  DevConnector
+// What will do with the DevConnector ..
 /*
 
 Small social network with authentication, profiles, dashboard, posts
 
 */
+
+// Res.json is identical to res.send but it outputs a json.. serves json
