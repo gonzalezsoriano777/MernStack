@@ -21,7 +21,7 @@ router.get('/test', (req, res) => res.json({msg: "Users Works"}));
 // @routes GET api/profile/register
 // @desc  Register user
 // @access Public
-router.get('/registering', (req, res) => {
+router.post('/register', (req, res) => {
     User.findOne({ email: req.body.email }) // request the email thats passed in with req.body.email
     .then(user => {
         if(user) {
