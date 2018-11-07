@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 
 const users = require('./routes/api/users');
 const profile = require('./routes/api/profile');
@@ -15,10 +16,15 @@ mongoose
 .then(() => console.log('MongoDB connected')) // Once it connects to MongoDB it will say this
 .catch(err => console.log(err)); // If there is an error from connecting to MongoDB then it will put an error in the nodemon server
 
+// Body Parser middleware
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
+
+
 app.get('/', (req, res) => res.send('Hello'));
 
 // Use routes
-app.use('/api/users', users);
+app.use('/api/user', users);
 app.use('/api/profile', profile);
 app.use('/api/posts', post);
 
