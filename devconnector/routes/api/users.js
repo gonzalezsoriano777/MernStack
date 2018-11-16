@@ -113,7 +113,8 @@ router.post('/login', (req, res) => {
                          success: true,
                          token: 'Bearer ' + token
                      });
-                 }); // More of a secure process, if the user is not active it automatically signs out in about an hour.
+                 }
+                ); // More of a secure process, if the user is not active it automatically signs out in about an hour.
              }else {
                  errors.password = 'Password incorrect';
                  return res.status(400).json(errors);

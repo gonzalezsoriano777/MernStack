@@ -61,6 +61,8 @@ router.get('/user/:user_id', (req, res) => {
 // @desc   Get all profiles
 // @access Public
 router.get('/all', (req, res) => {
+   const errors = {};
+   
     Profile.find()
     .populate('user', ['name', 'avatar'])
     .then(profiles => {
@@ -70,13 +72,18 @@ router.get('/all', (req, res) => {
         }
          res.json(profiles);
     })
-    (res.status(404).json({profile: 'There is no profile for this user' }))
-})
+    .catch(err => res.status(404).json({ profile: 'There is no profile for this user' }));
+});
 
 // @routes GET api/profile
 // @desc   Get current uers profile
 // @access Private
-router.get('/', passport.authenticate('jwt', { session: false }), (req, res) => {
+router.get(
+    '/', 
+    passport.authenticate('jwt', { session: false }), 
+    (req, res) => {
+   const errors = {};
+   
    Profile.findOne({ user: req.user.id })
    .then(profile => {
        if(!profile) {
@@ -164,7 +171,7 @@ router.post(
 // @routes GET api/profile/experience
 // @desc   Add experience to profile
 // @access Private
-router.post('/.experience', passport.authenticate('jwt', { session: false }), (req, res) => {
+router.post('/experience', passport.authenticate('jwt', { session: false }), (req, res) => {
     
     const { errors, isValid } = validateExperienceInput(req.body);      
         

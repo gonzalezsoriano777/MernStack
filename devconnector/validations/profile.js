@@ -20,11 +20,11 @@ module.exports = function validateProfileInput(data) {
    }
    
    if(Validator.isEmpty(data.status)) {
-       errors.handle = 'Status field is required';
+       errors.status = 'Status field is required';
    }
  
    if(Validator.isEmpty(data.skills)) {
-       errors.handle = 'Skills field is required';
+       errors.skills = 'Skills field is required';
    }
    
    if(!isEmpty(data.website)){

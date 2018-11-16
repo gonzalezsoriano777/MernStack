@@ -9,7 +9,7 @@ module.exports = function validateRegisterInput(data) {
     data.name = !isEmpty(data.name) ? data.name : ''; // Means if the data is not empty then it wil show the data but if it is empty it will show an empty string and will be tested here
      data.email = !isEmpty(data.email) ? data.email : ''; 
       data.password = !isEmpty(data.password) ? data.password : ''; 
-       data.password2 = !isEmpty(data.password2) ? data.password : ''; 
+       data.password2 = !isEmpty(data.password2) ? data.password2 : ''; 
         
    
    
@@ -35,7 +35,7 @@ module.exports = function validateRegisterInput(data) {
       errors.password = 'Password field is required';
   }
   
-  if(Validator.isLength(data.password, {min: 6, max: 30})) {
+  if(!Validator.isLength(data.password, {min: 6, max: 30})) {
       errors.password = 'Password must be at least 6 characters';
   }
   
