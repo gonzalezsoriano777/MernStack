@@ -22,7 +22,7 @@ Heroku and Git for Deployment .. New to me // Used for Deployment
 */
 
 
-  DevConnector
+
 // What will do with the DevConnector ..
 /*
 
