@@ -6,15 +6,10 @@ module.exports = function validateLoginInput(data) {
     let errors = {};
     
     
-    data.name = !isEmpty(data.name) ? data.name : ''; // Means if the data is not empty then it wil show the data but if it is empty it will show an empty string and will be tested here
-     data.email = !isEmpty(data.email) ? data.email : ''; 
+    data.email = !isEmpty(data.email) ? data.email : ''; // Means if the data is not empty then it wil show the data but if it is empty it will show an empty string and will be tested here
+     data.password = !isEmpty(data.password) ? data.password : ''; 
       
         
-   
-   
-    if(!Validator.isLength(data.name, { min: 2, max: 30 })){
-        errors.name = 'Name must be between 2 and 30 characters';
-    }
     
    
     
@@ -23,7 +18,7 @@ module.exports = function validateLoginInput(data) {
       errors.email = 'Email field is required';
   }
   
-   if(!Validator.isEmpty(data.email)) {
+   if(!Validator.isEmail(data.email)) {
       errors.email = 'Email is invalid';
   }
   

@@ -4,16 +4,11 @@
   "description": "devconnector",
   "main": "server.js",
   "scripts": {
-<<<<<<< HEAD
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "client-install" : "npm install --prefix client",
-    "client": "nodemon server.js --prefix client",
-    "dev": "concurrently \"npm run server \" \"npm run client\""
-=======
+    "client-install": "npm install --prefix client",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run client\" \"npm run server\"",
     "start": "node server.js",
     "server" : "nodemon server.js"
->>>>>>> Section6
   },
   "repository": {
     "type": "git",

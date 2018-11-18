@@ -21,8 +21,13 @@ Heroku and Git for Deployment .. New to me // Used for Deployment
 
 */
 
+<<<<<<< HEAD
 const DevConnector = {};
   DevConnector
+=======
+
+
+>>>>>>> Section6
 // What will do with the DevConnector ..
 /*
 
