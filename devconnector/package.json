@@ -8,7 +8,7 @@
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run client\" \"npm run server\"",
     "start": "node server.js",
-    "server" : "nodemon server.js"
+    "server": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -25,13 +25,14 @@
     "body-parser": "^1.18.3",
     "concurrently": "^4.0.1",
     "express": "^4.9.8",
+    "gravatar": "^1.8.0",
     "jsonwebtoken": "^8.3.0",
     "mongoose": "^5.3.9",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
     "validator": "^10.8.0"
   },
-  "devDependencies": { 
+  "devDependencies": {
     "nodemon": "^1.18.6"
   }
 }
