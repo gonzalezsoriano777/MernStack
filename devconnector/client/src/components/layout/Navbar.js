@@ -18,28 +18,10 @@ class Navbar extends Component {
       const authLinks = (
           <ul className="navbar-nav ml-auto">
           <li className="nav-item">
-            <Link 
-            className="nav-link" to="/register">
-            Sign Up
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/login">
-            Login
-            </Link>
-          </li>
-        </ul>
-        );
-        
-        const guestLinks = (
-          <ul className="navbar-nav ml-auto">
-          <li className="nav-item">
-            <a href="#value" 
+          <a href="#v" 
             onClick={this.onLogoutClick.bind(this)} 
             className="nav-link">
-             
-             
-            <img 
+             <img 
             className="rounded-circle"
             src={user.avatar} 
             alt={user.name} 
@@ -47,7 +29,23 @@ class Navbar extends Component {
             title ="You must have gravatar connected to your email to display an image" 
             />{' '} 
             Logout
-            </a>
+             </a>
+          </li>
+        </ul>
+        );
+        
+        const guestLinks = (
+          <ul className="navbar-nav ml-auto">
+          <li className="nav-item">
+           <Link 
+            className="nav-link" to="/register">
+            Sign Up
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/login">
+            Login
+            </Link> 
           </li>
         </ul>
         );
