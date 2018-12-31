@@ -10,7 +10,7 @@ import { GET_ERRORS, SET_CURRENT_USER } from './types';
 // Register User
 export const registerUser = (userData, history) => dispatch => {
         axios
-       .post('/api/users/register', userData)
+       .post('https://careerdevs4-gonzalezsoriano777.c9users.io/api/users/register', userData)
        .then(res => history.push('/login'))
        .catch(err => 
          dispatch({
