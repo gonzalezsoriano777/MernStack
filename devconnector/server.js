@@ -33,10 +33,10 @@ require('./config/passport')(passport);
 // Use routes
 app.use('/api/users', users);
 app.use('/api/profile', profile);
-app.use('/api/posts', post);
+app.use ('/api/posts', post);
+// Hello
+const port = process.env.PORT || 5000; // To run Heroku using the port you must use 'process.env.PORT'
 
-const port = process.env.PORT || 8081; // To run Heroku using the port you must use 'process.env.PORT'
-
-app.listen(port, () => console.log(`Server running on port 8081`)); // Using the back tics runs the ES6 for JS and you can run the server and call the port using the variable syntax .. which outputs whatever the port is
+app.listen(port, () => console.log(`Server running on port ${port}`)) // Using the back tics runs the ES6 for JS and you can run the server and call the port using the variable syntax .. which outputs whatever the port is
 
 module.exports = app;

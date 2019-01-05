@@ -1,0 +1,6 @@
+#keys
+/config
+
+#dependecies
+package-lock.json
+/node_modules
