@@ -15,14 +15,15 @@ export const registerUser = (userData, history) => dispatch => {
        .catch(err => 
          dispatch({
          type: GET_ERRORS,
-         payload: verr.response.data
+         payload: err.response.data
       })
      );
 };
 
 // Login - Get User Token
 export const loginUser = userData => dispatch => {
-    axios.post('/api/users/login', userData)
+    axios
+    .post('/api/users/login', userData)
     .then(res => {
         // Save to localStorage
         const { token } = res.data;
