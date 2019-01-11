@@ -54,6 +54,25 @@ export const addExperience = (expData, history) => dispatch => {
     });
 };
 
+// Get profile by handle
+export const getProfileByHandle = handle => dispatch => {
+    dispatch(setProfileLoading());
+    axios
+      .get(`/api/profile/handle/${handle}`)
+      .then(res =>
+        dispatch({
+          type: GET_PROFILE,
+          payload: res.data
+        })
+      )
+      .catch(err =>
+        dispatch({
+          type: GET_PROFILE,
+          payload: null
+        })
+      );
+  };
+
 // Add education
 export const addEducation = (eduData, history) => dispatch => {
     axios
