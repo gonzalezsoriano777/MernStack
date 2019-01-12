@@ -18,6 +18,9 @@ class Navbar extends Component {
 
     const authLinks = (
       <ul className="navbar-nav ml-auto">
+      <Link className="nav-link" to="/feed">
+        Post Feed
+      </Link>
         <li className="nav-item">
         <Link className="nav-link" to="/dashboard">
             Dashboard
