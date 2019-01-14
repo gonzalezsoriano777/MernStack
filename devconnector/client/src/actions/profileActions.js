@@ -99,7 +99,7 @@ export const deleteExperience = (id) => dispatch => {
     .catch(err => 
         dispatch({
             type: GET_ERRORS,
-            payload: err.responce.data
+            payload: err.response.data
         })
     )
 }
@@ -117,7 +117,7 @@ export const deleteEducation = (id) => dispatch => {
     .catch(err => 
         dispatch({
             type: GET_ERRORS,
-            payload: err.responce.data
+            payload: err.response.data
         })
     )
 }
@@ -153,7 +153,7 @@ export const deleteAccount = () => dispatch => {
         ).catch(err => 
             dispatch({
                 type: GET_ERRORS,
-                payload: err.responce.data
+                payload: err.response.data
             })
         );
     }

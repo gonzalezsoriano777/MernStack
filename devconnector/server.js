@@ -13,7 +13,7 @@ const db = require('./config/keys').mongoURI; // this is the db variable (databa
 
 // Connect to MongoDB
 mongoose
-.connect(db, { useNewUrlParser: true, useCreateIndex: true, }) // What is added after db is for the deprecation... minor issue
+.connect(db, { useNewUrlParser: true }) // What is added after db is for the deprecation... minor issue
 .then(() => console.log('MongoDB connected')) // Once it connects to MongoDB it will say this
 .catch(err => console.log(err)); // If there is an error from connecting to MongoDB then it will put an error in the nodemon server
 

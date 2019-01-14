@@ -1,5 +1,5 @@
 #keys
-/config
+/config/keys_dev
 
 #dependecies
 package-lock.json

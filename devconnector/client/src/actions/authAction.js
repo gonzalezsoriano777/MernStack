@@ -45,7 +45,7 @@ export const loginUser = userData => dispatch => {
 };
     
     // Set logged in user
-    export const setCurrentUser = (decoded) => {
+    export const setCurrentUser = decoded => {
         return {
             type: SET_CURRENT_USER,
             payload: decoded
@@ -61,6 +61,3 @@ export const logoutUser = () => dispatch => {
   // Set current user to {} which will set isAuthenticated to false
   dispatch(setCurrentUser({}));
 };
-
-
- 
