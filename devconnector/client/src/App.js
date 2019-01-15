@@ -61,62 +61,62 @@ if (localStorage.jwtToken) {
 class App extends Component {
   render() {
     return (
-        <Provider store={store}>
-      <Router>
-      <div className="App">
-      <Navbar />
-       <Route exact path="/" component={Landing} />
-       <div className = "container">
-         <Route exact path="/register" component={Register} />
-         <Route exact path="/login" component={Login} />
-         <Route exact path="/profiles" component={Profiles} />
-         <Route exact path="/profile/:handle" component={Profile} />
+      <Provider store={store}>
+        <Router>
+          <div className="App">
+            <Navbar />
+            <Route exact path="/" component={Landing} />
+            <div className = "container">
+              <Route exact path="/register" component={Register} />
+              <Route exact path="/login" component={Login} />
+              <Route exact path="/profiles" component={Profiles} />
+              <Route exact path="/profile/:handle" component={Profile} />
 
-         <Switch>
-         <PrivateRoute exact path="/dashboard" components={Dashboard} />
-         </Switch>
-         
-         <Switch>
-         <PrivateRoute 
-         exact path="/create-profile" 
-         components={CreateProfile} 
-         />
-         </Switch>
+              {/* <Switch> */}
+                <Route exact path="/dashboard" components={Dashboard} />
+              {/* </Switch>
+                
+              <Switch>
+                <PrivateRoute 
+                exact path="/create-profile" 
+                components={CreateProfile} 
+                />
+              </Switch>
 
-         <Switch>
-         <PrivateRoute 
-         exact path="/edit-profile" 
-         components={EditProfile} 
-         />
-         </Switch>
+              <Switch>
+                <PrivateRoute 
+                exact path="/edit-profile" 
+                components={EditProfile} 
+                />
+              </Switch>
 
-         <Switch>
-         <PrivateRoute 
-         exact path="/add-experience" 
-         components={AddExperience} 
-         />
-         </Switch>
+              <Switch>
+                <PrivateRoute 
+                exact path="/add-experience" 
+                components={AddExperience} 
+                />
+              </Switch>
 
-         <Switch>
-         <PrivateRoute 
-         exact path="/add-education" 
-         components={AddEducation} 
-         />
+              <Switch>
+                <PrivateRoute 
+                exact path="/add-education" 
+                components={AddEducation} 
+                />
+              </Switch>
 
-         <Switch>
-         <PrivateRoute exact path="/feed" components={Posts} />
-         </Switch>
+              <Switch>
+                <PrivateRoute exact path="/feed" components={Posts} />
+              </Switch>
 
-         <Switch>
-         <PrivateRoute exact path="/post/:id" components={Post} />
-         </Switch>
+              <Switch>
+                <PrivateRoute exact path="/post/:id" components={Post} />
+              </Switch> */}
 
-         </Switch>
-         <Route exact path="/not-found" component={NotFound} />
-         </div>
-       <Footer />
-      </div>
-      </Router> 
+              <Route exact path="/not-found" component={NotFound} />
+            </div>
+            <Footer />
+          </div>
+        </Router>
       </Provider>
     );
   }
