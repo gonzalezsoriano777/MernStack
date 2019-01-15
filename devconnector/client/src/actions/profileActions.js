@@ -44,14 +44,14 @@ export const createProfile = (profileData, history) => dispatch => {
 // Add experience
 export const addExperience = (expData, history) => dispatch => {
     axios
-    .post('api/profile/experience', expData)
+    .post('api/profile/.experience', expData)
     .then(res => history.push('/dashboard'))
-    .catch(err => {
+    .catch(err => 
         dispatch({
         type: GET_ERRORS,
         payload: err.response.data
         })
-    });
+    );
 };
 
 // Get profile by handle
@@ -76,18 +76,18 @@ export const getProfileByHandle = handle => dispatch => {
 // Add education
 export const addEducation = (eduData, history) => dispatch => {
     axios
-    .post('api/profile/experience', eduData)
+    .post('api/profile/education', eduData)
     .then(res => history.push('/dashboard'))
-    .catch(err => {
+    .catch(err => 
         dispatch({
         type: GET_ERRORS,
         payload: err.response.data
         })
-    });
+    );
 }
 
 // Add Experience
-export const deleteExperience = (id) => dispatch => {
+export const deleteExperience = id => dispatch => {
     axios
     .delete(`api/profile/experience/${id}`)
     .then(res => 
@@ -105,7 +105,7 @@ export const deleteExperience = (id) => dispatch => {
 }
 
 // Add Education
-export const deleteEducation = (id) => dispatch => {
+export const deleteEducation = id => dispatch => {
     axios
     .delete(`api/profile/education/${id}`)
     .then(res => 

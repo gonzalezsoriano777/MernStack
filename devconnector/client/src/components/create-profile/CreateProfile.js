@@ -35,7 +35,7 @@ class CreateProfile extends Component {
         
     }
     
-    componentWillRecieveProps(nextProps) {
+    componentWillReceiveProps(nextProps) {
         if(nextProps.errors) {
             this.setState({ errors: nextProps.errors });
         }
@@ -205,7 +205,7 @@ class CreateProfile extends Component {
                  
                  <TextFieldGroup 
                  placeholder="Github Username"
-                 name="githusername"
+                 name="githubusername"
                  value={this.state.githubusername}
                  onChange={this.onChange}
                  error={errors.githubusername}

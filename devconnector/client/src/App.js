@@ -72,45 +72,45 @@ class App extends Component {
               <Route exact path="/profiles" component={Profiles} />
               <Route exact path="/profile/:handle" component={Profile} />
 
-              {/* <Switch> */}
-                <Route exact path="/dashboard" components={Dashboard} />
-              {/* </Switch>
+               <Switch> 
+                <Route exact path="/dashboard" component={Dashboard} />
+               </Switch>
                 
               <Switch>
                 <PrivateRoute 
                 exact path="/create-profile" 
-                components={CreateProfile} 
+                component={CreateProfile} 
                 />
               </Switch>
 
               <Switch>
                 <PrivateRoute 
                 exact path="/edit-profile" 
-                components={EditProfile} 
+                component={EditProfile} 
                 />
               </Switch>
 
               <Switch>
                 <PrivateRoute 
                 exact path="/add-experience" 
-                components={AddExperience} 
+                component={AddExperience} 
                 />
               </Switch>
 
               <Switch>
                 <PrivateRoute 
                 exact path="/add-education" 
-                components={AddEducation} 
+                component={AddEducation} 
                 />
               </Switch>
 
               <Switch>
-                <PrivateRoute exact path="/feed" components={Posts} />
+                <PrivateRoute exact path="/feed" component={Posts} />
               </Switch>
 
               <Switch>
-                <PrivateRoute exact path="/post/:id" components={Post} />
-              </Switch> */}
+                <PrivateRoute exact path="/post/:id" component={Post} />
+              </Switch> 
 
               <Route exact path="/not-found" component={NotFound} />
             </div>

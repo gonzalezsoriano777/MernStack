@@ -1,5 +1,5 @@
 import axios from 'axios';
-import setAuthToken from '../utile/setAuthToken'
+import setAuthToken from '../utile/setAuthToken';
 import jwt_decode from 'jwt-decode';
 
 
@@ -37,7 +37,6 @@ export const loginUser = userData => dispatch => {
         dispatch(setCurrentUser(decoded));
     })
     .catch(err => {
-        console.log(err);
         dispatch({
            type: GET_ERRORS,
            payload: err.response.data
